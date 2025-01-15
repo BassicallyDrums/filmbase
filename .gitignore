@@ -1,0 +1,5 @@
+# all .env files - files with enironment variables
+*.env
+
+
+
