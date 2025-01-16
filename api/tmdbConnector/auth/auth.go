@@ -4,10 +4,11 @@ import (
 	"log"
 	"os"
 
+	"github.com/BassicallyDrums/filmbase/api/models"
 	"github.com/joho/godotenv"
 )
 
-func main() {
+func Authenticate() models.Auth {
 	err := godotenv.Load(".env")
 	if err != nil {
 		log.Fatalf("ERROR loading .env: %s", err)
@@ -18,4 +19,10 @@ func main() {
 		APIToken string = os.Getenv("APIToken")
 	)
 
+	auth := models.Auth{
+		APIKey:   APIKey,
+		APIToken: APIToken,
+	}
+
+	return auth
 }

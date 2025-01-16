@@ -1,0 +1,30 @@
+/* App.css */ 
+.card { 
+    /* Add some margin to each card */ 
+    margin: 10px; 
+    /* Allow the card to flex and fill the available space */ 
+    flex: 1 1 auto; 
+} 
+.row { 
+    display: flex; 
+    /* Ensure items wrap on smaller screens */ 
+    flex-wrap: wrap; 
+    /* Center the cards horizontally */ 
+    justify-content: center; 
+} 
+.container { 
+    display: flex; 
+    /* Allow the container to behave like a column */ 
+    flex-direction: column; 
+    /* Center items within the container */ 
+    align-items: center; 
+} 
+@media (max-width: 576px) { 
+    /* Extra small devices (phones, less than 576px) */ 
+    .card { 
+        /* Make cards full width on extra small devices */ 
+        width: 100%; 
+        /* Add bottom margin */ 
+        margin-bottom: 20px; 
+    } 
+} 
